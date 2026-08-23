@@ -84,7 +84,7 @@ git branch
 Your task is to create a file called:
 
 ```text
-aboutMe.md
+README.md
 ```
 
 Inside it, write a short introduction about yourself. You can include things like:
@@ -115,7 +115,7 @@ This is useful for checking what you're about to commit.
 Once you're happy with your changes, tell Git to start tracking the file:
 
 ```sh
-git add aboutMe.md
+git add README.md
 ```
 
 Then create a **commit**:
@@ -140,7 +140,7 @@ For example:
 git push -u origin prateek
 ```
 
-Now your branch and your `aboutMe.md` file should be visible on GitHub!
+Now your branch and your `README.md` file should be visible on GitHub!
 
 ## Pulling Changes
 
@@ -156,7 +156,7 @@ This becomes especially important when working with other people, since they may
 
 1. Clone this repository.
 2. Create a new branch using your name.
-3. Create an `aboutMe.md` file.
+3. Create an `README.md` file.
 4. Write a short introduction about yourself.
 5. Add a nice photograph of yourself.
 6. Use `git diff` to inspect your changes.
