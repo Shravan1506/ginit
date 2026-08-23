@@ -63,7 +63,7 @@ As you can see, this directory contains a `README.md` along with some folders:
 
 Now let's actually use Git!
 
-## 1. Branches
+## Branches
 
 A **branch** is essentially your own version of the project where you can make changes without affecting the main project.
 
@@ -79,7 +79,7 @@ You can check which branch you are currently on using:
 git branch
 ```
 
-## 2. Make Your Changes
+## Make Your Changes
 
 Your task is to create a file called:
 
@@ -98,7 +98,7 @@ Inside it, write a short introduction about yourself. You can include things lik
 
 Along with it, add your photo, so that we can use it for our socials!
 
-## 3. Check Your Changes with `git diff`
+## Check Your Changes with `git diff`
 
 Before committing your changes, you can see exactly what has changed using:
 
@@ -110,7 +110,7 @@ git diff
 
 This is useful for checking what you're about to commit.
 
-## 4. Commit Your Changes
+## Commit Your Changes
 
 Once you're happy with your changes, tell Git to start tracking the file:
 
@@ -126,7 +126,7 @@ git commit -m "Add my about me"
 
 A commit is essentially a snapshot of your project at a particular point in time.
 
-## 5. Push Your Branch
+## Push Your Branch
 
 Your branch currently only exists on your computer. To upload it to GitHub:
 
@@ -142,7 +142,7 @@ git push -u origin prateek
 
 Now your branch and your `aboutMe.md` file should be visible on GitHub!
 
-## 6. Pulling Changes
+## Pulling Changes
 
 `git pull` is used to download changes from GitHub and apply them to your local repository.
 
