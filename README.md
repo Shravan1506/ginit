@@ -134,12 +134,6 @@ Your branch currently only exists on your computer. To upload it to GitHub:
 git push -u origin your-name
 ```
 
-For example:
-
-```sh
-git push -u origin prateek
-```
-
 Now your branch and your `README.md` file should be visible on GitHub!
 
 ## Pulling Changes
