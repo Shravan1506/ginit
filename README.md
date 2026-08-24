@@ -13,7 +13,7 @@ To download Git, use the following links:
 - [Git for Windows](https://git-scm.com/install/windows)
 - **Unix/Linux:** Git is usually available through your system's package manager.
 
-Then configure Git with your name and email:
+Then configure Git with:
 
 ```sh
 git config --global user.name "Your Name"
@@ -26,140 +26,110 @@ For setting up SSH, please follow the steps given in [SSH setup](https://docs.gi
 
 ## Cloning a Repository
 
-First, clone this repository locally using one of the following methods:
-
-### HTTPS Method
-
-This requires no SSH setup but may require additional authentication:
-
-```sh
-git clone https://github.com/Team-Proboticists/ginit.git
-```
-
-### SSH Method
-
-Requires setup of an [SSH key](#ssh-setup).
+First, clone this repository locally:
 
 ```sh
 git clone git@github.com:Team-Proboticists/ginit.git
 ```
 
-**SSH is the preferred method.**
-
-## Directory Description
-
-As you can see, this directory contains a `README.md` along with some folders:
-
-```text
-.
-├── cppCodes
-│   └── main.cpp
-├── pythonCodes
-│   └── main.py
-└── README.md
-```
+SSH is the preferred method.
 
 # Your First Git Workflow
 
-Now let's actually use Git!
+## Switch to the Intros Branch
 
-## Branches
-
-A **branch** is essentially your own version of the project where you can make changes without affecting the main project.
-
-First, create a new branch using:
+Switch to the branch used for collecting introductions:
 
 ```sh
-git checkout -b your-name
+git switch intros
 ```
 
-You can check which branch you are currently on using:
+## Add Your Introduction
 
-```sh
-git branch
-```
+Create a folder with your name.
 
-## Make Your Changes
-
-Your task is to create a file called:
+Example:
 
 ```text
-README.md
+John_Doe
+├── README.md
+└── image.jpg
 ```
 
-Inside it, write a short introduction about yourself. You can include things like:
+Inside `README.md`, write a short introduction about yourself. Include:
 
 - Your name
 - Your department/year
 - Your interests
 - Your hobbies
 - Your favourite programming language
-- Anything else you think is interesting!
+- Anything else interesting about yourself
 
-Along with it, add your photo, so that we can use it for our socials!
+Also add your image inside your folder. This will be used for our socials!
 
-## Check Your Changes with `git diff`
+## Check Your Changes
 
-Before committing your changes, you can see exactly what has changed using:
+Before committing, check your changes:
 
 ```sh
 git diff
 ```
 
-`git diff` shows the differences between your current files and the last committed version.
-
-This is useful for checking what you're about to commit.
+`git diff` shows the changes made since your last commit.
 
 ## Commit Your Changes
 
-Once you're happy with your changes, tell Git to start tracking the file:
+Add your folder:
 
 ```sh
-git add README.md
+git add Your_Name/
 ```
 
-Then create a **commit**:
+Create a commit:
 
 ```sh
-git commit -m "Add my about me"
+git commit -m "Add my introduction"
 ```
 
-A commit is essentially a snapshot of your project at a particular point in time.
+A commit is a snapshot of your project at a particular point in time.
 
-## Push Your Branch
+## Pull Latest Changes
 
-Your branch currently only exists on your computer. To upload it to GitHub:
+Before pushing, update your local branch:
 
 ```sh
-git push -u origin your-name
+git pull origin intros
 ```
 
-Now your branch and your `README.md` file should be visible on GitHub!
+This helps prevent conflicts when multiple people are contributing.
 
-## Pulling Changes
+## Push Your Changes
 
-`git pull` is used to download changes from GitHub and apply them to your local repository.
+Upload your commit to GitHub:
 
 ```sh
-git pull
+git push origin intros
 ```
 
-This becomes especially important when working with other people, since they may have pushed changes while you were working.
+Your introduction should now be visible on GitHub!
 
 # Your Task
 
 1. Clone this repository.
-2. Create a new branch using your name.
-3. Create an `README.md` file.
-4. Write a short introduction about yourself.
-5. Add a nice photograph of yourself.
+2. Switch to the `intros` branch.
+3. Create a folder with your name.
+4. Add a `README.md` with a short introduction.
+5. Add your image inside the folder.
 6. Use `git diff` to inspect your changes.
-7. Commit your changes.
-8. Push your branch to GitHub.
-9. Open your branch on GitHub and verify that your changes are there.
+7. Add and commit your changes.
+8. Pull the latest version of `intros`.
+9. Push your changes to GitHub.
+10. Verify that your introduction is visible.
 
 ### Bonus
 
-Try creating a **Pull Request** from your branch to the `main` branch.
+Edit your introduction and repeat:
 
-Don't worry if you break something. That's part of the point of using Git. Git is basically a time machine for your code.
+**diff → add → commit → pull → push**
+
+Don't worry if something goes wrong. That's part of learning Git. Git is basically a time machine for your code. 
